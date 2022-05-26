@@ -1,0 +1,116 @@
+@import "Variables";
+
+.container{
+  width: 70vw;
+  margin: 0 auto;
+}
+@media (max-width: $breakpoint-mobile) {
+  .container{
+    width: 97vw;
+    margin: 0 auto;
+  }
+}
+.nav-bar{
+  @include spacing(10px 0,20px 0);
+  @include flex(row,nowrap,space-between);
+  border-bottom: 2px solid $color_light;
+  .brand{
+    width: 120px;
+  }
+  .shopping-cart{
+    font-size: 30px;
+    @include spacing(10px,0);
+    @include grid(center);
+    border-radius: 5px;
+    &:hover{
+      background-color: $color_light;
+    }
+  }
+}
+.Featured-heading{
+  @include flex(row,nowrap,space-between);
+  @include spacing($spacing2 0, 0);
+}
+h1{
+  @include font(26px,700,$color_pri,normal);
+  @include spacing(0,0);
+  text-transform: capitalize;
+}
+h2{
+  @include font(18px,600,$color_pri,normal);
+  @include spacing(0, $spacing2 0 0);
+  text-transform: capitalize;
+}
+h3{
+  @include font(16px,700,$color_sec,normal);
+  @include spacing(0, 0);
+  text-transform: capitalize;
+}
+p{
+  @include font(14px, 400, $color_sec, normal);
+  text-align: justify;
+}
+.image-tag{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: $spacing1 $spacing3;
+  background-color: $color_white;
+  p.tag{
+    @include font(14px,800,$color_pri,normal);
+    text-transform: capitalize;
+  }
+}
+.btn{
+  background-color: $color_pri;
+  text-transform: uppercase;
+  border-radius: 0px;
+  @include font(14px,600,$color_white,normal);
+  @include spacing($spacing1 $spacing4,0);
+  border: none;
+  &:hover{
+    background-color: $color_sec;
+  }
+  &.display-mobile{
+    display:none;
+  }
+  &.display-desktop{
+    display: block;
+  }
+}
+@media (max-width: $breakpoint_mobile){
+  .btn{
+    width: 100%;
+    border-radius: 0px;
+    &:focus{
+      background-color: $color_pri;
+    }
+    &.display-mobile{
+      display:block;
+      @include spacing($spacing1 $spacing4,$spacing1 0);
+    }
+    &.display-desktop{
+      display: none;
+    }
+  }
+}
+.Featured-details{
+  @include spacing(0,$spacing3 0 0);
+  .row{
+    .col{
+      &:last-child{
+        text-align: right;
+      }
+    }
+  }
+}
+.recommendations{
+  @include flex(row,nowrap,flex-end);
+  .recommendation{
+    @include spacing(0,0 0 0 $spacing3)
+  }
+}
+.loading{
+  @include grid(center);
+  height: 40vh;
+}

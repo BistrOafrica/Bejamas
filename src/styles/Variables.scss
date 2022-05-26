@@ -1,0 +1,36 @@
+
+@mixin font($size,$weight,$color,$style){
+  font-family: 'Archivo', sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $style;
+  color: $color;
+}
+@mixin flex($flow,$wrap,$justify){
+  display: flex;
+  flex-flow:$flow $wrap;
+  justify-content: $justify;
+  align-items: center;
+}
+@mixin grid($placement){
+  display: grid;
+  place-items: $placement;
+}
+@mixin spacing($padding,$margin){
+  padding: $padding;
+  margin: $margin;
+}
+
+$spacing:5px;
+$spacing1:10px;
+$spacing2:20px;
+$spacing3:30px;
+$spacing4:40px;
+$spacing5:50px;
+
+$color_pri:#000000;
+$color_sec:#9B9B9B;
+$color_light: #f5f5f5;
+$color_white:#FFFFFF;
+
+$breakpoint-mobile:560px
